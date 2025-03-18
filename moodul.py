@@ -32,4 +32,14 @@ def is_year_leap(aasta: int)-> bool:
         v=False
     return v
 
-def square()
+def square(kulg:float)->any:
+    '''
+    ruut
+    :param float kulg: Sisend kasutajalt, mingi arv
+    arvutab ruudu umbermoot, pindala ja diagonaal
+    :rtype: float tagastab umbermoot, pindala ja diagonaal
+    '''
+    umbermoot=kulg*4
+    pindala=kulg**2
+    diagonaal=(2)**(1/2)*kulg
+    return umbermoot, pindala, diagonaal
