@@ -43,3 +43,75 @@ def square(kulg:float)->any:
     pindala=kulg**2
     diagonaal=(2)**(1/2)*kulg
     return umbermoot, pindala, diagonaal
+
+def season(kuu:int)->str:
+    '''
+    aastaajad
+    :param int kuu: Sisend kasutajalt, mingi arv
+    tagastab aastaaja
+    :rtype: str tagastab aastaaja
+    '''
+    if kuu in [12,1,2]:
+        vastus="talv"
+    elif kuu in [3,4,5]:
+        vastus="kevad"
+    elif kuu in [6,7,8]:
+        vastus="suvi"
+    elif kuu in [9,10,11]:
+        vastus="sugis"
+    return vastus
+
+def bank(a: int, years: int)->int:
+    '''
+    : a int: sisend kui palju raha
+    : years int : sisent mitu aastat
+    '''
+    vastus = a * (1+0.1*years)
+    print(vastus)
+    return vastus
+
+def date (kuu:int, paev:int)->str:
+    '''
+    kuupaev
+    :param int kuu: Sisend kasutajalt, mingi arv
+    :param int paev: Sisend kasutajalt, mingi arv
+    tagastab kuupaev
+    :rtype: str tagastab kuupaev
+    '''
+    if kuu in [1,3,5,7,8,10,12]:
+        if paev in range(1,32):
+            vastus="kuupaev on oige"
+        else:
+            vastus="kuupaev on vale"
+    elif kuu in [4,6,9,11]:
+        if paev in range(1,31):
+            vastus="kuupaev on oige"
+        else:
+            vastus="kuupaev on vale"
+    elif kuu == 2:
+        if paev in range(1,29):
+            vastus="kuupaev on oige"
+    else:
+        vastus="kuupaev on vale"
+    return vastus
+
+
+def is_prime(arv: float) ->bool:
+    """
+    Kontrollib, kas number 
+    tagastab True, kui liigaasta ja
+    false kui on tavalise 
+    rtype: bool
+
+    """
+
+def is_prime(arv):
+    if arv < 2 or arv > 1000:
+        return False
+    for i in range(2, n):
+        if arv % i == 0:
+            return False
+    return True
+
+
+# def XOR_cipher(str: str, key:str) ->str: 
